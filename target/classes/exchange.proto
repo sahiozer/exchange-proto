@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package shared;
+
+// GoldService for handling gold-related operations
+service GoldService {
+    rpc GetGoldPrice (GoldPriceRequest) returns (GoldPriceResponse);
+}
+
+// ExchangeService for handling exchange rates from banks
+service ExchangeService {
+    rpc GetBankRates (EmptyRequest) returns (BankRatesResponse);
+}
+
+// Shared messages
+message GoldPriceRequest {
+    string currency = 1;
+}
+
+message GoldPriceResponse {
+    string price = 1;
+}
+
+// Bank rate details
+message BankRate {
+    string bankName = 1;        // Name of the bank
+    float goldBuyingRate = 2;   // Gold buying rate
+    float goldSellingRate = 3;  // Gold selling rate
+}
+
+// Response for bank rates
+message BankRatesResponse {
+    repeated BankRate rates = 1; // List of rates from different banks
+}
+
+message EmptyRequest {}
