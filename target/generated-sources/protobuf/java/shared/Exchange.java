@@ -14,1130 +14,16 @@ public final class Exchange {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface GoldPriceRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:shared.GoldPriceRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string currency = 1;</code>
-     * @return The currency.
-     */
-    java.lang.String getCurrency();
-    /**
-     * <code>string currency = 1;</code>
-     * @return The bytes for currency.
-     */
-    com.google.protobuf.ByteString
-        getCurrencyBytes();
-  }
-  /**
-   * <pre>
-   * Shared messages
-   * </pre>
-   *
-   * Protobuf type {@code shared.GoldPriceRequest}
-   */
-  public static final class GoldPriceRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:shared.GoldPriceRequest)
-      GoldPriceRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GoldPriceRequest.newBuilder() to construct.
-    private GoldPriceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private GoldPriceRequest() {
-      currency_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GoldPriceRequest();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return shared.Exchange.internal_static_shared_GoldPriceRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return shared.Exchange.internal_static_shared_GoldPriceRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              shared.Exchange.GoldPriceRequest.class, shared.Exchange.GoldPriceRequest.Builder.class);
-    }
-
-    public static final int CURRENCY_FIELD_NUMBER = 1;
-    private volatile java.lang.Object currency_;
-    /**
-     * <code>string currency = 1;</code>
-     * @return The currency.
-     */
-    @java.lang.Override
-    public java.lang.String getCurrency() {
-      java.lang.Object ref = currency_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        currency_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string currency = 1;</code>
-     * @return The bytes for currency.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCurrencyBytes() {
-      java.lang.Object ref = currency_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        currency_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currency_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, currency_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currency_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, currency_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof shared.Exchange.GoldPriceRequest)) {
-        return super.equals(obj);
-      }
-      shared.Exchange.GoldPriceRequest other = (shared.Exchange.GoldPriceRequest) obj;
-
-      if (!getCurrency()
-          .equals(other.getCurrency())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CURRENCY_FIELD_NUMBER;
-      hash = (53 * hash) + getCurrency().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static shared.Exchange.GoldPriceRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static shared.Exchange.GoldPriceRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static shared.Exchange.GoldPriceRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static shared.Exchange.GoldPriceRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static shared.Exchange.GoldPriceRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static shared.Exchange.GoldPriceRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static shared.Exchange.GoldPriceRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static shared.Exchange.GoldPriceRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static shared.Exchange.GoldPriceRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static shared.Exchange.GoldPriceRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static shared.Exchange.GoldPriceRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static shared.Exchange.GoldPriceRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(shared.Exchange.GoldPriceRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Shared messages
-     * </pre>
-     *
-     * Protobuf type {@code shared.GoldPriceRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:shared.GoldPriceRequest)
-        shared.Exchange.GoldPriceRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return shared.Exchange.internal_static_shared_GoldPriceRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return shared.Exchange.internal_static_shared_GoldPriceRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                shared.Exchange.GoldPriceRequest.class, shared.Exchange.GoldPriceRequest.Builder.class);
-      }
-
-      // Construct using shared.Exchange.GoldPriceRequest.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        currency_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return shared.Exchange.internal_static_shared_GoldPriceRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public shared.Exchange.GoldPriceRequest getDefaultInstanceForType() {
-        return shared.Exchange.GoldPriceRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public shared.Exchange.GoldPriceRequest build() {
-        shared.Exchange.GoldPriceRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public shared.Exchange.GoldPriceRequest buildPartial() {
-        shared.Exchange.GoldPriceRequest result = new shared.Exchange.GoldPriceRequest(this);
-        result.currency_ = currency_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof shared.Exchange.GoldPriceRequest) {
-          return mergeFrom((shared.Exchange.GoldPriceRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(shared.Exchange.GoldPriceRequest other) {
-        if (other == shared.Exchange.GoldPriceRequest.getDefaultInstance()) return this;
-        if (!other.getCurrency().isEmpty()) {
-          currency_ = other.currency_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                currency_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-
-      private java.lang.Object currency_ = "";
-      /**
-       * <code>string currency = 1;</code>
-       * @return The currency.
-       */
-      public java.lang.String getCurrency() {
-        java.lang.Object ref = currency_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          currency_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string currency = 1;</code>
-       * @return The bytes for currency.
-       */
-      public com.google.protobuf.ByteString
-          getCurrencyBytes() {
-        java.lang.Object ref = currency_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          currency_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string currency = 1;</code>
-       * @param value The currency to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCurrency(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        currency_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string currency = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCurrency() {
-        
-        currency_ = getDefaultInstance().getCurrency();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string currency = 1;</code>
-       * @param value The bytes for currency to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCurrencyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        currency_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:shared.GoldPriceRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:shared.GoldPriceRequest)
-    private static final shared.Exchange.GoldPriceRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new shared.Exchange.GoldPriceRequest();
-    }
-
-    public static shared.Exchange.GoldPriceRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<GoldPriceRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GoldPriceRequest>() {
-      @java.lang.Override
-      public GoldPriceRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<GoldPriceRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GoldPriceRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public shared.Exchange.GoldPriceRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface GoldPriceResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:shared.GoldPriceResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string price = 1;</code>
-     * @return The price.
-     */
-    java.lang.String getPrice();
-    /**
-     * <code>string price = 1;</code>
-     * @return The bytes for price.
-     */
-    com.google.protobuf.ByteString
-        getPriceBytes();
-  }
-  /**
-   * Protobuf type {@code shared.GoldPriceResponse}
-   */
-  public static final class GoldPriceResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:shared.GoldPriceResponse)
-      GoldPriceResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GoldPriceResponse.newBuilder() to construct.
-    private GoldPriceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private GoldPriceResponse() {
-      price_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GoldPriceResponse();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return shared.Exchange.internal_static_shared_GoldPriceResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return shared.Exchange.internal_static_shared_GoldPriceResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              shared.Exchange.GoldPriceResponse.class, shared.Exchange.GoldPriceResponse.Builder.class);
-    }
-
-    public static final int PRICE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object price_;
-    /**
-     * <code>string price = 1;</code>
-     * @return The price.
-     */
-    @java.lang.Override
-    public java.lang.String getPrice() {
-      java.lang.Object ref = price_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        price_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string price = 1;</code>
-     * @return The bytes for price.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getPriceBytes() {
-      java.lang.Object ref = price_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        price_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, price_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(price_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, price_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof shared.Exchange.GoldPriceResponse)) {
-        return super.equals(obj);
-      }
-      shared.Exchange.GoldPriceResponse other = (shared.Exchange.GoldPriceResponse) obj;
-
-      if (!getPrice()
-          .equals(other.getPrice())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PRICE_FIELD_NUMBER;
-      hash = (53 * hash) + getPrice().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static shared.Exchange.GoldPriceResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static shared.Exchange.GoldPriceResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static shared.Exchange.GoldPriceResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static shared.Exchange.GoldPriceResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static shared.Exchange.GoldPriceResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static shared.Exchange.GoldPriceResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static shared.Exchange.GoldPriceResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static shared.Exchange.GoldPriceResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static shared.Exchange.GoldPriceResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static shared.Exchange.GoldPriceResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static shared.Exchange.GoldPriceResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static shared.Exchange.GoldPriceResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(shared.Exchange.GoldPriceResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code shared.GoldPriceResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:shared.GoldPriceResponse)
-        shared.Exchange.GoldPriceResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return shared.Exchange.internal_static_shared_GoldPriceResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return shared.Exchange.internal_static_shared_GoldPriceResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                shared.Exchange.GoldPriceResponse.class, shared.Exchange.GoldPriceResponse.Builder.class);
-      }
-
-      // Construct using shared.Exchange.GoldPriceResponse.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        price_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return shared.Exchange.internal_static_shared_GoldPriceResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public shared.Exchange.GoldPriceResponse getDefaultInstanceForType() {
-        return shared.Exchange.GoldPriceResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public shared.Exchange.GoldPriceResponse build() {
-        shared.Exchange.GoldPriceResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public shared.Exchange.GoldPriceResponse buildPartial() {
-        shared.Exchange.GoldPriceResponse result = new shared.Exchange.GoldPriceResponse(this);
-        result.price_ = price_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof shared.Exchange.GoldPriceResponse) {
-          return mergeFrom((shared.Exchange.GoldPriceResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(shared.Exchange.GoldPriceResponse other) {
-        if (other == shared.Exchange.GoldPriceResponse.getDefaultInstance()) return this;
-        if (!other.getPrice().isEmpty()) {
-          price_ = other.price_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                price_ = input.readStringRequireUtf8();
-
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-
-      private java.lang.Object price_ = "";
-      /**
-       * <code>string price = 1;</code>
-       * @return The price.
-       */
-      public java.lang.String getPrice() {
-        java.lang.Object ref = price_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          price_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string price = 1;</code>
-       * @return The bytes for price.
-       */
-      public com.google.protobuf.ByteString
-          getPriceBytes() {
-        java.lang.Object ref = price_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          price_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string price = 1;</code>
-       * @param value The price to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPrice(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        price_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string price = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearPrice() {
-        
-        price_ = getDefaultInstance().getPrice();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string price = 1;</code>
-       * @param value The bytes for price to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPriceBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        price_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:shared.GoldPriceResponse)
-    }
-
-    // @@protoc_insertion_point(class_scope:shared.GoldPriceResponse)
-    private static final shared.Exchange.GoldPriceResponse DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new shared.Exchange.GoldPriceResponse();
-    }
-
-    public static shared.Exchange.GoldPriceResponse getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<GoldPriceResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GoldPriceResponse>() {
-      @java.lang.Override
-      public GoldPriceResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<GoldPriceResponse> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GoldPriceResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public shared.Exchange.GoldPriceResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface BankRateOrBuilder extends
       // @@protoc_insertion_point(interface_extends:shared.BankRate)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     * Name of the bank
-     * </pre>
-     *
      * <code>string bankName = 1;</code>
      * @return The bankName.
      */
     java.lang.String getBankName();
     /**
-     * <pre>
-     * Name of the bank
-     * </pre>
-     *
      * <code>string bankName = 1;</code>
      * @return The bytes for bankName.
      */
@@ -1145,24 +31,16 @@ public final class Exchange {
         getBankNameBytes();
 
     /**
-     * <pre>
-     * Gold buying rate
-     * </pre>
-     *
-     * <code>float goldBuyingRate = 2;</code>
-     * @return The goldBuyingRate.
+     * <code>float buyingRate = 2;</code>
+     * @return The buyingRate.
      */
-    float getGoldBuyingRate();
+    float getBuyingRate();
 
     /**
-     * <pre>
-     * Gold selling rate
-     * </pre>
-     *
-     * <code>float goldSellingRate = 3;</code>
-     * @return The goldSellingRate.
+     * <code>float sellingRate = 3;</code>
+     * @return The sellingRate.
      */
-    float getGoldSellingRate();
+    float getSellingRate();
   }
   /**
    * <pre>
@@ -1212,10 +90,6 @@ public final class Exchange {
     public static final int BANKNAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object bankName_;
     /**
-     * <pre>
-     * Name of the bank
-     * </pre>
-     *
      * <code>string bankName = 1;</code>
      * @return The bankName.
      */
@@ -1233,10 +107,6 @@ public final class Exchange {
       }
     }
     /**
-     * <pre>
-     * Name of the bank
-     * </pre>
-     *
      * <code>string bankName = 1;</code>
      * @return The bytes for bankName.
      */
@@ -1255,34 +125,26 @@ public final class Exchange {
       }
     }
 
-    public static final int GOLDBUYINGRATE_FIELD_NUMBER = 2;
-    private float goldBuyingRate_;
+    public static final int BUYINGRATE_FIELD_NUMBER = 2;
+    private float buyingRate_;
     /**
-     * <pre>
-     * Gold buying rate
-     * </pre>
-     *
-     * <code>float goldBuyingRate = 2;</code>
-     * @return The goldBuyingRate.
+     * <code>float buyingRate = 2;</code>
+     * @return The buyingRate.
      */
     @java.lang.Override
-    public float getGoldBuyingRate() {
-      return goldBuyingRate_;
+    public float getBuyingRate() {
+      return buyingRate_;
     }
 
-    public static final int GOLDSELLINGRATE_FIELD_NUMBER = 3;
-    private float goldSellingRate_;
+    public static final int SELLINGRATE_FIELD_NUMBER = 3;
+    private float sellingRate_;
     /**
-     * <pre>
-     * Gold selling rate
-     * </pre>
-     *
-     * <code>float goldSellingRate = 3;</code>
-     * @return The goldSellingRate.
+     * <code>float sellingRate = 3;</code>
+     * @return The sellingRate.
      */
     @java.lang.Override
-    public float getGoldSellingRate() {
-      return goldSellingRate_;
+    public float getSellingRate() {
+      return sellingRate_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1302,11 +164,11 @@ public final class Exchange {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bankName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bankName_);
       }
-      if (java.lang.Float.floatToRawIntBits(goldBuyingRate_) != 0) {
-        output.writeFloat(2, goldBuyingRate_);
+      if (java.lang.Float.floatToRawIntBits(buyingRate_) != 0) {
+        output.writeFloat(2, buyingRate_);
       }
-      if (java.lang.Float.floatToRawIntBits(goldSellingRate_) != 0) {
-        output.writeFloat(3, goldSellingRate_);
+      if (java.lang.Float.floatToRawIntBits(sellingRate_) != 0) {
+        output.writeFloat(3, sellingRate_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1320,13 +182,13 @@ public final class Exchange {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bankName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bankName_);
       }
-      if (java.lang.Float.floatToRawIntBits(goldBuyingRate_) != 0) {
+      if (java.lang.Float.floatToRawIntBits(buyingRate_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, goldBuyingRate_);
+          .computeFloatSize(2, buyingRate_);
       }
-      if (java.lang.Float.floatToRawIntBits(goldSellingRate_) != 0) {
+      if (java.lang.Float.floatToRawIntBits(sellingRate_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(3, goldSellingRate_);
+          .computeFloatSize(3, sellingRate_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1345,12 +207,12 @@ public final class Exchange {
 
       if (!getBankName()
           .equals(other.getBankName())) return false;
-      if (java.lang.Float.floatToIntBits(getGoldBuyingRate())
+      if (java.lang.Float.floatToIntBits(getBuyingRate())
           != java.lang.Float.floatToIntBits(
-              other.getGoldBuyingRate())) return false;
-      if (java.lang.Float.floatToIntBits(getGoldSellingRate())
+              other.getBuyingRate())) return false;
+      if (java.lang.Float.floatToIntBits(getSellingRate())
           != java.lang.Float.floatToIntBits(
-              other.getGoldSellingRate())) return false;
+              other.getSellingRate())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1364,12 +226,12 @@ public final class Exchange {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + BANKNAME_FIELD_NUMBER;
       hash = (53 * hash) + getBankName().hashCode();
-      hash = (37 * hash) + GOLDBUYINGRATE_FIELD_NUMBER;
+      hash = (37 * hash) + BUYINGRATE_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getGoldBuyingRate());
-      hash = (37 * hash) + GOLDSELLINGRATE_FIELD_NUMBER;
+          getBuyingRate());
+      hash = (37 * hash) + SELLINGRATE_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getGoldSellingRate());
+          getSellingRate());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1504,9 +366,9 @@ public final class Exchange {
         super.clear();
         bankName_ = "";
 
-        goldBuyingRate_ = 0F;
+        buyingRate_ = 0F;
 
-        goldSellingRate_ = 0F;
+        sellingRate_ = 0F;
 
         return this;
       }
@@ -1535,8 +397,8 @@ public final class Exchange {
       public shared.Exchange.BankRate buildPartial() {
         shared.Exchange.BankRate result = new shared.Exchange.BankRate(this);
         result.bankName_ = bankName_;
-        result.goldBuyingRate_ = goldBuyingRate_;
-        result.goldSellingRate_ = goldSellingRate_;
+        result.buyingRate_ = buyingRate_;
+        result.sellingRate_ = sellingRate_;
         onBuilt();
         return result;
       }
@@ -1589,11 +451,11 @@ public final class Exchange {
           bankName_ = other.bankName_;
           onChanged();
         }
-        if (other.getGoldBuyingRate() != 0F) {
-          setGoldBuyingRate(other.getGoldBuyingRate());
+        if (other.getBuyingRate() != 0F) {
+          setBuyingRate(other.getBuyingRate());
         }
-        if (other.getGoldSellingRate() != 0F) {
-          setGoldSellingRate(other.getGoldSellingRate());
+        if (other.getSellingRate() != 0F) {
+          setSellingRate(other.getSellingRate());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1627,12 +489,12 @@ public final class Exchange {
                 break;
               } // case 10
               case 21: {
-                goldBuyingRate_ = input.readFloat();
+                buyingRate_ = input.readFloat();
 
                 break;
               } // case 21
               case 29: {
-                goldSellingRate_ = input.readFloat();
+                sellingRate_ = input.readFloat();
 
                 break;
               } // case 29
@@ -1654,10 +516,6 @@ public final class Exchange {
 
       private java.lang.Object bankName_ = "";
       /**
-       * <pre>
-       * Name of the bank
-       * </pre>
-       *
        * <code>string bankName = 1;</code>
        * @return The bankName.
        */
@@ -1674,10 +532,6 @@ public final class Exchange {
         }
       }
       /**
-       * <pre>
-       * Name of the bank
-       * </pre>
-       *
        * <code>string bankName = 1;</code>
        * @return The bytes for bankName.
        */
@@ -1695,10 +549,6 @@ public final class Exchange {
         }
       }
       /**
-       * <pre>
-       * Name of the bank
-       * </pre>
-       *
        * <code>string bankName = 1;</code>
        * @param value The bankName to set.
        * @return This builder for chaining.
@@ -1714,10 +564,6 @@ public final class Exchange {
         return this;
       }
       /**
-       * <pre>
-       * Name of the bank
-       * </pre>
-       *
        * <code>string bankName = 1;</code>
        * @return This builder for chaining.
        */
@@ -1728,10 +574,6 @@ public final class Exchange {
         return this;
       }
       /**
-       * <pre>
-       * Name of the bank
-       * </pre>
-       *
        * <code>string bankName = 1;</code>
        * @param value The bytes for bankName to set.
        * @return This builder for chaining.
@@ -1748,88 +590,64 @@ public final class Exchange {
         return this;
       }
 
-      private float goldBuyingRate_ ;
+      private float buyingRate_ ;
       /**
-       * <pre>
-       * Gold buying rate
-       * </pre>
-       *
-       * <code>float goldBuyingRate = 2;</code>
-       * @return The goldBuyingRate.
+       * <code>float buyingRate = 2;</code>
+       * @return The buyingRate.
        */
       @java.lang.Override
-      public float getGoldBuyingRate() {
-        return goldBuyingRate_;
+      public float getBuyingRate() {
+        return buyingRate_;
       }
       /**
-       * <pre>
-       * Gold buying rate
-       * </pre>
-       *
-       * <code>float goldBuyingRate = 2;</code>
-       * @param value The goldBuyingRate to set.
+       * <code>float buyingRate = 2;</code>
+       * @param value The buyingRate to set.
        * @return This builder for chaining.
        */
-      public Builder setGoldBuyingRate(float value) {
+      public Builder setBuyingRate(float value) {
         
-        goldBuyingRate_ = value;
+        buyingRate_ = value;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * Gold buying rate
-       * </pre>
-       *
-       * <code>float goldBuyingRate = 2;</code>
+       * <code>float buyingRate = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearGoldBuyingRate() {
+      public Builder clearBuyingRate() {
         
-        goldBuyingRate_ = 0F;
+        buyingRate_ = 0F;
         onChanged();
         return this;
       }
 
-      private float goldSellingRate_ ;
+      private float sellingRate_ ;
       /**
-       * <pre>
-       * Gold selling rate
-       * </pre>
-       *
-       * <code>float goldSellingRate = 3;</code>
-       * @return The goldSellingRate.
+       * <code>float sellingRate = 3;</code>
+       * @return The sellingRate.
        */
       @java.lang.Override
-      public float getGoldSellingRate() {
-        return goldSellingRate_;
+      public float getSellingRate() {
+        return sellingRate_;
       }
       /**
-       * <pre>
-       * Gold selling rate
-       * </pre>
-       *
-       * <code>float goldSellingRate = 3;</code>
-       * @param value The goldSellingRate to set.
+       * <code>float sellingRate = 3;</code>
+       * @param value The sellingRate to set.
        * @return This builder for chaining.
        */
-      public Builder setGoldSellingRate(float value) {
+      public Builder setSellingRate(float value) {
         
-        goldSellingRate_ = value;
+        sellingRate_ = value;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * Gold selling rate
-       * </pre>
-       *
-       * <code>float goldSellingRate = 3;</code>
+       * <code>float sellingRate = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearGoldSellingRate() {
+      public Builder clearSellingRate() {
         
-        goldSellingRate_ = 0F;
+        sellingRate_ = 0F;
         onChanged();
         return this;
       }
@@ -1902,44 +720,24 @@ public final class Exchange {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     * List of rates from different banks
-     * </pre>
-     *
      * <code>repeated .shared.BankRate rates = 1;</code>
      */
     java.util.List<shared.Exchange.BankRate> 
         getRatesList();
     /**
-     * <pre>
-     * List of rates from different banks
-     * </pre>
-     *
      * <code>repeated .shared.BankRate rates = 1;</code>
      */
     shared.Exchange.BankRate getRates(int index);
     /**
-     * <pre>
-     * List of rates from different banks
-     * </pre>
-     *
      * <code>repeated .shared.BankRate rates = 1;</code>
      */
     int getRatesCount();
     /**
-     * <pre>
-     * List of rates from different banks
-     * </pre>
-     *
      * <code>repeated .shared.BankRate rates = 1;</code>
      */
     java.util.List<? extends shared.Exchange.BankRateOrBuilder> 
         getRatesOrBuilderList();
     /**
-     * <pre>
-     * List of rates from different banks
-     * </pre>
-     *
      * <code>repeated .shared.BankRate rates = 1;</code>
      */
     shared.Exchange.BankRateOrBuilder getRatesOrBuilder(
@@ -1993,10 +791,6 @@ public final class Exchange {
     public static final int RATES_FIELD_NUMBER = 1;
     private java.util.List<shared.Exchange.BankRate> rates_;
     /**
-     * <pre>
-     * List of rates from different banks
-     * </pre>
-     *
      * <code>repeated .shared.BankRate rates = 1;</code>
      */
     @java.lang.Override
@@ -2004,10 +798,6 @@ public final class Exchange {
       return rates_;
     }
     /**
-     * <pre>
-     * List of rates from different banks
-     * </pre>
-     *
      * <code>repeated .shared.BankRate rates = 1;</code>
      */
     @java.lang.Override
@@ -2016,10 +806,6 @@ public final class Exchange {
       return rates_;
     }
     /**
-     * <pre>
-     * List of rates from different banks
-     * </pre>
-     *
      * <code>repeated .shared.BankRate rates = 1;</code>
      */
     @java.lang.Override
@@ -2027,10 +813,6 @@ public final class Exchange {
       return rates_.size();
     }
     /**
-     * <pre>
-     * List of rates from different banks
-     * </pre>
-     *
      * <code>repeated .shared.BankRate rates = 1;</code>
      */
     @java.lang.Override
@@ -2038,10 +820,6 @@ public final class Exchange {
       return rates_.get(index);
     }
     /**
-     * <pre>
-     * List of rates from different banks
-     * </pre>
-     *
      * <code>repeated .shared.BankRate rates = 1;</code>
      */
     @java.lang.Override
@@ -2430,10 +1208,6 @@ public final class Exchange {
           shared.Exchange.BankRate, shared.Exchange.BankRate.Builder, shared.Exchange.BankRateOrBuilder> ratesBuilder_;
 
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public java.util.List<shared.Exchange.BankRate> getRatesList() {
@@ -2444,10 +1218,6 @@ public final class Exchange {
         }
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public int getRatesCount() {
@@ -2458,10 +1228,6 @@ public final class Exchange {
         }
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public shared.Exchange.BankRate getRates(int index) {
@@ -2472,10 +1238,6 @@ public final class Exchange {
         }
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public Builder setRates(
@@ -2493,10 +1255,6 @@ public final class Exchange {
         return this;
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public Builder setRates(
@@ -2511,10 +1269,6 @@ public final class Exchange {
         return this;
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public Builder addRates(shared.Exchange.BankRate value) {
@@ -2531,10 +1285,6 @@ public final class Exchange {
         return this;
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public Builder addRates(
@@ -2552,10 +1302,6 @@ public final class Exchange {
         return this;
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public Builder addRates(
@@ -2570,10 +1316,6 @@ public final class Exchange {
         return this;
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public Builder addRates(
@@ -2588,10 +1330,6 @@ public final class Exchange {
         return this;
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public Builder addAllRates(
@@ -2607,10 +1345,6 @@ public final class Exchange {
         return this;
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public Builder clearRates() {
@@ -2624,10 +1358,6 @@ public final class Exchange {
         return this;
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public Builder removeRates(int index) {
@@ -2641,10 +1371,6 @@ public final class Exchange {
         return this;
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public shared.Exchange.BankRate.Builder getRatesBuilder(
@@ -2652,10 +1378,6 @@ public final class Exchange {
         return getRatesFieldBuilder().getBuilder(index);
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public shared.Exchange.BankRateOrBuilder getRatesOrBuilder(
@@ -2666,10 +1388,6 @@ public final class Exchange {
         }
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public java.util.List<? extends shared.Exchange.BankRateOrBuilder> 
@@ -2681,10 +1399,6 @@ public final class Exchange {
         }
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public shared.Exchange.BankRate.Builder addRatesBuilder() {
@@ -2692,10 +1406,6 @@ public final class Exchange {
             shared.Exchange.BankRate.getDefaultInstance());
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public shared.Exchange.BankRate.Builder addRatesBuilder(
@@ -2704,10 +1414,6 @@ public final class Exchange {
             index, shared.Exchange.BankRate.getDefaultInstance());
       }
       /**
-       * <pre>
-       * List of rates from different banks
-       * </pre>
-       *
        * <code>repeated .shared.BankRate rates = 1;</code>
        */
       public java.util.List<shared.Exchange.BankRate.Builder> 
@@ -3193,16 +1899,6 @@ public final class Exchange {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_shared_GoldPriceRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_shared_GoldPriceRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_shared_GoldPriceResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_shared_GoldPriceResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_shared_BankRate_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3226,48 +1922,34 @@ public final class Exchange {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016exchange.proto\022\006shared\"$\n\020GoldPriceReq" +
-      "uest\022\020\n\010currency\030\001 \001(\t\"\"\n\021GoldPriceRespo" +
-      "nse\022\r\n\005price\030\001 \001(\t\"M\n\010BankRate\022\020\n\010bankNa" +
-      "me\030\001 \001(\t\022\026\n\016goldBuyingRate\030\002 \001(\002\022\027\n\017gold" +
-      "SellingRate\030\003 \001(\002\"4\n\021BankRatesResponse\022\037" +
-      "\n\005rates\030\001 \003(\0132\020.shared.BankRate\"\016\n\014Empty" +
-      "Request2R\n\013GoldService\022C\n\014GetGoldPrice\022\030" +
-      ".shared.GoldPriceRequest\032\031.shared.GoldPr" +
-      "iceResponse2R\n\017ExchangeService\022?\n\014GetBan" +
-      "kRates\022\024.shared.EmptyRequest\032\031.shared.Ba" +
-      "nkRatesResponseb\006proto3"
+      "\n\016exchange.proto\022\006shared\"E\n\010BankRate\022\020\n\010" +
+      "bankName\030\001 \001(\t\022\022\n\nbuyingRate\030\002 \001(\002\022\023\n\013se" +
+      "llingRate\030\003 \001(\002\"4\n\021BankRatesResponse\022\037\n\005" +
+      "rates\030\001 \003(\0132\020.shared.BankRate\"\016\n\014EmptyRe" +
+      "quest2N\n\013GoldService\022?\n\014GetGoldRates\022\024.s" +
+      "hared.EmptyRequest\032\031.shared.BankRatesRes" +
+      "ponse2R\n\rSilverService\022A\n\016GetSilverRates" +
+      "\022\024.shared.EmptyRequest\032\031.shared.BankRate" +
+      "sResponseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_shared_GoldPriceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_shared_GoldPriceRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_shared_GoldPriceRequest_descriptor,
-        new java.lang.String[] { "Currency", });
-    internal_static_shared_GoldPriceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_shared_GoldPriceResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_shared_GoldPriceResponse_descriptor,
-        new java.lang.String[] { "Price", });
     internal_static_shared_BankRate_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_shared_BankRate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_shared_BankRate_descriptor,
-        new java.lang.String[] { "BankName", "GoldBuyingRate", "GoldSellingRate", });
+        new java.lang.String[] { "BankName", "BuyingRate", "SellingRate", });
     internal_static_shared_BankRatesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_shared_BankRatesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_shared_BankRatesResponse_descriptor,
         new java.lang.String[] { "Rates", });
     internal_static_shared_EmptyRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_shared_EmptyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_shared_EmptyRequest_descriptor,

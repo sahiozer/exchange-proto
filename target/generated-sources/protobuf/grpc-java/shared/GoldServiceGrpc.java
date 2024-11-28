@@ -3,9 +3,6 @@ package shared;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
- * <pre>
- * GoldService for handling gold-related operations
- * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.55.1)",
@@ -18,35 +15,35 @@ public final class GoldServiceGrpc {
   public static final String SERVICE_NAME = "shared.GoldService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<shared.Exchange.GoldPriceRequest,
-      shared.Exchange.GoldPriceResponse> getGetGoldPriceMethod;
+  private static volatile io.grpc.MethodDescriptor<shared.Exchange.EmptyRequest,
+      shared.Exchange.BankRatesResponse> getGetGoldRatesMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetGoldPrice",
-      requestType = shared.Exchange.GoldPriceRequest.class,
-      responseType = shared.Exchange.GoldPriceResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "GetGoldRates",
+      requestType = shared.Exchange.EmptyRequest.class,
+      responseType = shared.Exchange.BankRatesResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<shared.Exchange.GoldPriceRequest,
-      shared.Exchange.GoldPriceResponse> getGetGoldPriceMethod() {
-    io.grpc.MethodDescriptor<shared.Exchange.GoldPriceRequest, shared.Exchange.GoldPriceResponse> getGetGoldPriceMethod;
-    if ((getGetGoldPriceMethod = GoldServiceGrpc.getGetGoldPriceMethod) == null) {
+  public static io.grpc.MethodDescriptor<shared.Exchange.EmptyRequest,
+      shared.Exchange.BankRatesResponse> getGetGoldRatesMethod() {
+    io.grpc.MethodDescriptor<shared.Exchange.EmptyRequest, shared.Exchange.BankRatesResponse> getGetGoldRatesMethod;
+    if ((getGetGoldRatesMethod = GoldServiceGrpc.getGetGoldRatesMethod) == null) {
       synchronized (GoldServiceGrpc.class) {
-        if ((getGetGoldPriceMethod = GoldServiceGrpc.getGetGoldPriceMethod) == null) {
-          GoldServiceGrpc.getGetGoldPriceMethod = getGetGoldPriceMethod =
-              io.grpc.MethodDescriptor.<shared.Exchange.GoldPriceRequest, shared.Exchange.GoldPriceResponse>newBuilder()
+        if ((getGetGoldRatesMethod = GoldServiceGrpc.getGetGoldRatesMethod) == null) {
+          GoldServiceGrpc.getGetGoldRatesMethod = getGetGoldRatesMethod =
+              io.grpc.MethodDescriptor.<shared.Exchange.EmptyRequest, shared.Exchange.BankRatesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGoldPrice"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGoldRates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  shared.Exchange.GoldPriceRequest.getDefaultInstance()))
+                  shared.Exchange.EmptyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  shared.Exchange.GoldPriceResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GoldServiceMethodDescriptorSupplier("GetGoldPrice"))
+                  shared.Exchange.BankRatesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new GoldServiceMethodDescriptorSupplier("GetGoldRates"))
               .build();
         }
       }
     }
-    return getGetGoldPriceMethod;
+    return getGetGoldRatesMethod;
   }
 
   /**
@@ -94,25 +91,19 @@ public final class GoldServiceGrpc {
   }
 
   /**
-   * <pre>
-   * GoldService for handling gold-related operations
-   * </pre>
    */
   public interface AsyncService {
 
     /**
      */
-    default void getGoldPrice(shared.Exchange.GoldPriceRequest request,
-        io.grpc.stub.StreamObserver<shared.Exchange.GoldPriceResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGoldPriceMethod(), responseObserver);
+    default void getGoldRates(shared.Exchange.EmptyRequest request,
+        io.grpc.stub.StreamObserver<shared.Exchange.BankRatesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGoldRatesMethod(), responseObserver);
     }
   }
 
   /**
    * Base class for the server implementation of the service GoldService.
-   * <pre>
-   * GoldService for handling gold-related operations
-   * </pre>
    */
   public static abstract class GoldServiceImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -124,9 +115,6 @@ public final class GoldServiceGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service GoldService.
-   * <pre>
-   * GoldService for handling gold-related operations
-   * </pre>
    */
   public static final class GoldServiceStub
       extends io.grpc.stub.AbstractAsyncStub<GoldServiceStub> {
@@ -143,18 +131,15 @@ public final class GoldServiceGrpc {
 
     /**
      */
-    public void getGoldPrice(shared.Exchange.GoldPriceRequest request,
-        io.grpc.stub.StreamObserver<shared.Exchange.GoldPriceResponse> responseObserver) {
+    public void getGoldRates(shared.Exchange.EmptyRequest request,
+        io.grpc.stub.StreamObserver<shared.Exchange.BankRatesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetGoldPriceMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetGoldRatesMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service GoldService.
-   * <pre>
-   * GoldService for handling gold-related operations
-   * </pre>
    */
   public static final class GoldServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<GoldServiceBlockingStub> {
@@ -171,17 +156,14 @@ public final class GoldServiceGrpc {
 
     /**
      */
-    public shared.Exchange.GoldPriceResponse getGoldPrice(shared.Exchange.GoldPriceRequest request) {
+    public shared.Exchange.BankRatesResponse getGoldRates(shared.Exchange.EmptyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetGoldPriceMethod(), getCallOptions(), request);
+          getChannel(), getGetGoldRatesMethod(), getCallOptions(), request);
     }
   }
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service GoldService.
-   * <pre>
-   * GoldService for handling gold-related operations
-   * </pre>
    */
   public static final class GoldServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<GoldServiceFutureStub> {
@@ -198,14 +180,14 @@ public final class GoldServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<shared.Exchange.GoldPriceResponse> getGoldPrice(
-        shared.Exchange.GoldPriceRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<shared.Exchange.BankRatesResponse> getGoldRates(
+        shared.Exchange.EmptyRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetGoldPriceMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetGoldRatesMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_GET_GOLD_PRICE = 0;
+  private static final int METHODID_GET_GOLD_RATES = 0;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -224,9 +206,9 @@ public final class GoldServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_GET_GOLD_PRICE:
-          serviceImpl.getGoldPrice((shared.Exchange.GoldPriceRequest) request,
-              (io.grpc.stub.StreamObserver<shared.Exchange.GoldPriceResponse>) responseObserver);
+        case METHODID_GET_GOLD_RATES:
+          serviceImpl.getGoldRates((shared.Exchange.EmptyRequest) request,
+              (io.grpc.stub.StreamObserver<shared.Exchange.BankRatesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -247,12 +229,12 @@ public final class GoldServiceGrpc {
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
         .addMethod(
-          getGetGoldPriceMethod(),
+          getGetGoldRatesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              shared.Exchange.GoldPriceRequest,
-              shared.Exchange.GoldPriceResponse>(
-                service, METHODID_GET_GOLD_PRICE)))
+              shared.Exchange.EmptyRequest,
+              shared.Exchange.BankRatesResponse>(
+                service, METHODID_GET_GOLD_RATES)))
         .build();
   }
 
@@ -301,7 +283,7 @@ public final class GoldServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GoldServiceFileDescriptorSupplier())
-              .addMethod(getGetGoldPriceMethod())
+              .addMethod(getGetGoldRatesMethod())
               .build();
         }
       }

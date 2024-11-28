@@ -2,29 +2,20 @@ syntax = "proto3";
 
 package shared;
 
+
 service GoldService {
-    rpc GetGoldPrice (GoldPriceRequest) returns (GoldPriceResponse);
+    rpc GetGoldRates (EmptyRequest) returns (BankRatesResponse);
 }
 
-// ExchangeService for handling exchange rates from banks
-service ExchangeService {
-    rpc GetBankRates (EmptyRequest) returns (BankRatesResponse);
-}
-
-// Shared messages
-message GoldPriceRequest {
-    string currency = 1;
-}
-
-message GoldPriceResponse {
-    string price = 1;
+service SilverService {
+    rpc GetSilverRates (EmptyRequest) returns (BankRatesResponse);
 }
 
 // Bank rate details
 message BankRate {
     string bankName = 1;
-    float goldBuyingRate = 2;
-    float goldSellingRate = 3;
+    float buyingRate = 2;
+    float sellingRate = 3;
 }
 
 // Response for bank rates
